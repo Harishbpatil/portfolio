@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -12,8 +13,27 @@ import MobileNav from "./components/MobileNav/MobileNav";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+// Import Howl from the howler library
+import { Howl } from "howler";
+
 function App() {
   const [theme] = useTheme();
+
+  useEffect(() => {
+    // Create a new Howl instance with the path to your audio file
+    const welcomeSound = new Howl({
+      src: [`${process.env.PUBLIC_URL}/sounds/welcomevoice.mp3`],
+      autoplay: true,
+      volume: 0.5,
+    });
+
+    // Clean up the audio when the component unmounts
+    return () => {
+      welcomeSound.stop();
+    };
+  }, []); // Empty dependency array means this effect runs once when the component mounts
+
   return (
     <>
       <div id={theme}>
@@ -30,7 +50,7 @@ function App() {
         </div>
         <div className="footer pb-3 ms-3">
           <Tada>
-            <h4 className="text-center">Made With Harish Patil❤️  &copy;2023</h4>
+            <h4 className="text-center">Made With Harish Patil❤️ &copy;2023</h4>
           </Tada>
         </div>
       </div>

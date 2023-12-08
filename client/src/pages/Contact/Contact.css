@@ -91,16 +91,29 @@ button:focus {
 @media (max-width: 600px) {
   .contact {
     margin: 0;
-    padding: 0;
+    padding-right: 4px;
     margin-top: 50px;
   }
   .contact .card2 {
     margin: 0;
   }
 
+  .border-line {
+    padding: auto;
+    margin: auto;
+    width: 100%;
+  }
+
+  
+
+  .form {
+    padding-right: 35px;
+  }
+
   .contact .card2 h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 5px;
   }
 }

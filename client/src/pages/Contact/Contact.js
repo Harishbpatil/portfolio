@@ -126,7 +126,7 @@ const Contact = () => {
                       <small className="or text-center">OR</small>
                       <div className="line" />
                     </div>
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form className="form" ref={form} onSubmit={sendEmail}>
                       <label>Name</label>
                       <input type="text" name="user_name" required />
                       <label>Email</label>

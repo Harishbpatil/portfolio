@@ -18,58 +18,15 @@ function WorkExp() {
               className="vertical-timeline-element--work"
               contentStyle={{ background: "white", color: "#1e1e2c" }}
               contentArrowStyle={{ borderRight: "7px solid  #138781" }}
-              date="2020 - present"
+              date="present"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
               icon={<BsPersonWorkspace />}
             >
               <h3 className="vertical-timeline-element-title">
-                Full stack devoloper
+                Full stack devoloper Trainee
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                XYZ pvt Ltd
-              </h4>
-              <p>
-                Creative Direction, User Experience, Visual Design, Project
-                Management, Team Leading
-              </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid  #138781" }}
-              date="2020 - present"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<BsPersonWorkspace />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Full stack devoloper
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                XYZ pvt Ltd
-              </h4>
-              <p>
-                Creative Direction, User Experience, Visual Design, Project
-                Management, Team Leading
-              </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: "white", color: "#1e1e2c" }}
-              contentArrowStyle={{ borderRight: "7px solid  #138781" }}
-              date="2020 - present"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              icon={<BsPersonWorkspace />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Full stack devoloper
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                XYZ pvt Ltd
-              </h4>
-              <p>
-                Creative Direction, User Experience, Visual Design, Project
-                Management, Team Leading
-              </p>
+              <h4 className="vertical-timeline-element-subtitle">Sharpener</h4>
+              <p>HTML,CSS,JavaScript,React</p>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>

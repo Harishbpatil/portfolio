@@ -1,7 +1,6 @@
 import React from "react";
 import "./Menus.css";
 import Zoom from "react-reveal/Zoom";
-
 import Fade from "react-reveal/Fade";
 import { Link } from "react-scroll";
 import {
@@ -13,17 +12,25 @@ import {
   FcReadingEbook,
   FcVideoProjector,
 } from "react-icons/fc";
+
+import menuClickSound from "../../assets/sounds/togglesound.mp3"; // Adjust the path as needed
+
 const Menus = ({ toggle }) => {
+  const playMenuClickSound = () => {
+    const audio = new Audio(menuClickSound);
+    audio.play();
+  };
+
+  // Adjust the offset value as needed to expand the clickable area
+  const offsetValue = -150;
+
   return (
     <>
       {toggle ? (
         <>
           <Zoom>
             <div className="navbar-profile-pic">
-              <img
-                src="/image/mypic.png"
-                alt="profile pic"
-              />
+              <img src="/image/mypic.png" alt="profile pic" />
             </div>
           </Zoom>
           <Fade left>
@@ -34,11 +41,12 @@ const Menus = ({ toggle }) => {
                     to="home"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcHome />
-                    Home
+                    {toggle && "Home"}
                   </Link>
                 </div>
                 <div className="nav-link">
@@ -46,11 +54,12 @@ const Menus = ({ toggle }) => {
                     to="about"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcAbout />
-                    About
+                    {toggle && "About"}
                   </Link>
                 </div>
                 <div className="nav-link">
@@ -58,37 +67,38 @@ const Menus = ({ toggle }) => {
                     to="education"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcReadingEbook />
-                    Education
+                    {toggle && "Education"}
                   </Link>
                 </div>
-
                 <div className="nav-link">
                   <Link
                     to="techstack"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcBiotech />
-                    Tech Stack
+                    {toggle && "Tech Stack"}
                   </Link>
                 </div>
-
                 <div className="nav-link">
                   <Link
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcVideoProjector />
-                    Projects
+                    {toggle && "Projects"}
                   </Link>
                 </div>
                 <div className="nav-link">
@@ -96,11 +106,12 @@ const Menus = ({ toggle }) => {
                     to="work"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcPortraitMode />
-                    Work Experince
+                    {toggle && "Work Experience"}
                   </Link>
                 </div>
                 <div className="nav-link">
@@ -108,11 +119,12 @@ const Menus = ({ toggle }) => {
                     to="contact"
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={offsetValue}
                     duration={100}
+                    onClick={playMenuClickSound}
                   >
                     <FcBusinessContact />
-                    Contact
+                    {toggle && "Contact"}
                   </Link>
                 </div>
               </div>
@@ -128,8 +140,9 @@ const Menus = ({ toggle }) => {
                   to="home"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcHome />
                 </Link>
@@ -139,8 +152,9 @@ const Menus = ({ toggle }) => {
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcAbout />
                 </Link>
@@ -150,32 +164,33 @@ const Menus = ({ toggle }) => {
                   to="education"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcReadingEbook />
                 </Link>
               </div>
-
               <div className="nav-link">
                 <Link
                   to="techstack"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcBiotech />
                 </Link>
               </div>
-
               <div className="nav-link">
                 <Link
                   to="projects"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcVideoProjector />
                 </Link>
@@ -185,8 +200,9 @@ const Menus = ({ toggle }) => {
                   to="work"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcPortraitMode />
                 </Link>
@@ -196,8 +212,9 @@ const Menus = ({ toggle }) => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={offsetValue}
                   duration={100}
+                  onClick={playMenuClickSound}
                 >
                   <FcBusinessContact />
                 </Link>
